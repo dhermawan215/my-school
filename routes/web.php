@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('tentang')->name('about.')->group(function () {
+    Route::view('/visi-misi', 'pages.visimisi')->name('visi-misi');
+});
